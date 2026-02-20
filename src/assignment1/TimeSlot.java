@@ -4,8 +4,10 @@ public final class TimeSlot {
 	private final int hour;
 
 	public TimeSlot(int hour) {
-		if (hour >= 0 || hour <= 23) {
+		if (hour >= 0 && hour <= 23) {
 			this.hour = hour; // takes hour as a int
+		} else {
+			this.hour = 0; // default to midnight if invalid
 		}
 	}
 
